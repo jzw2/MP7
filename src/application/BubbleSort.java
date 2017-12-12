@@ -9,6 +9,8 @@ public class BubbleSort extends SortAlgorithm {
 		super(arr);
 	}
 	public void nextStep() {
+		if (isSorted) 
+			return;
 		if (currentIndex < array.length - 1) {
 			if (array[currentIndex] > array[currentIndex + 1]) {
 				swap(currentIndex, currentIndex + 1);
@@ -30,6 +32,8 @@ public class BubbleSort extends SortAlgorithm {
 	
 	@Override
 	public String description() {
+		if (isSorted)
+			return "Done";
 		return "Comparing index " + currentIndex + " with index " + (currentIndex + 1);
 	}
 	
@@ -38,6 +42,7 @@ public class BubbleSort extends SortAlgorithm {
 		super.setArray(arr);
 		currentIndex = 0;
 		hasSwapped = false;
+		isSorted = false;
 	}
 	
 }

@@ -30,6 +30,7 @@ public abstract class SortAlgorithm {
 	
 	public void setArray(int[] arr) {
 		this.array = arr;
+		isSorted = false;
 	}
 	
 	public int[] getArray() { 

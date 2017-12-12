@@ -21,7 +21,7 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			
-			BubbleSort bs = new BubbleSort(new int[] {9, 8, 7, 6, 5, 4, 3});
+			//BubbleSort bs = new BubbleSort(new int[] {9, 8, 7, 6, 5, 4, 3});
 		
 			
 

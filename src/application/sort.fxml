@@ -67,11 +67,11 @@
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <RadioButton fx:id="bubbleSort" mnemonicParsing="false" text="Bubble Sort">
+                        <RadioButton fx:id="bubbleSort" mnemonicParsing="false" text="Bubble Sort" onAction="#selectBubble">
                            <toggleGroup>
                               <ToggleGroup fx:id="sort_type" />
                            </toggleGroup></RadioButton>
-                        <RadioButton mnemonicParsing="false" text="Selection Sort" toggleGroup="$sort_type" />
+                        <RadioButton mnemonicParsing="false" text="Selection Sort" toggleGroup="$sort_type"  onAction="#selectSelection"/>
                      </children>
                   </HBox>
                </children>

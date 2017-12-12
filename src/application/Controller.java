@@ -32,7 +32,7 @@ public class Controller  {
 	        // do initialization and configuration work...
 
 	        // trivial example, could also be done directly in the fxml:
-		  currentSort = new BubbleSort(arr);
+		  currentSort = new SelectionSort(arr);
 		  bubbleSort.setSelected(true);
 		  
 	       array.setText(currentSort.toString());
@@ -41,20 +41,34 @@ public class Controller  {
 	       
 	 }
 	  
+	 private void displayInfo() {
+		
+		 array.setText(currentSort.toString());
+		 description.setText(currentSort.description());
+		 
+	 }
+	  
 	 @FXML protected void generate() {
 		 for(int i = 0; i < arr.length; i++) {
 			 arr[i] = (new Random()).nextInt(10);
 		 }
-		 
 		 currentSort.setArray(arr);
-		 array.setText(currentSort.toString());
-		 
+		 displayInfo();
 	 }
 	 
 	 @FXML protected void onNext() {
 		 currentSort.nextStep();
-		 description.setText(currentSort.description());
-		 array.setText(currentSort.toString());
+		 displayInfo();
+	 }
+	 
+	 @FXML protected void selectBubble() {
+		 currentSort = new BubbleSort(arr);
+		 displayInfo();
+	 }
+	 
+	 @FXML protected void selectSelection() {
+		 currentSort = new SelectionSort(arr);
+		 displayInfo();
 	 }
 	
 }
