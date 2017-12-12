@@ -2,7 +2,6 @@
 
 <?import javafx.scene.AmbientLight?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
@@ -11,10 +10,10 @@
 <?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.effect.SepiaTone?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -57,25 +56,32 @@
     </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
-        <Label alignment="CENTER" layoutX="155.0" layoutY="177.0" style="&#10;" text="Drag components from Library here…" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
-          <font>
-            <Font size="18.0" />
-          </font>
-        </Label>
-            <Button layoutX="200.0" layoutY="243.0" mnemonicParsing="false" text="Next Step" />
-            <AnchorPane layoutX="164.0" layoutY="26.0" prefHeight="115.0" prefWidth="164.0">
+            <AnchorPane layoutX="219.0" layoutY="36.0" prefHeight="115.0" prefWidth="164.0">
                <effect>
                   <SepiaTone />
                </effect>
                <children>
-                  <Label layoutX="83.0" layoutY="37.0" prefHeight="90.0" prefWidth="208.0" text="Label" />
+                  <VBox layoutY="14.0" prefHeight="287.0" prefWidth="318.0">
+                     <children>
+                        <Label id="array" prefHeight="56.0" prefWidth="232.0" text="Array" />
+                        <Label id="description" text="Description" />
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button mnemonicParsing="false" text="Next Step" />
+                              <Button mnemonicParsing="false" text="Generate Random Sequence" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <RadioButton mnemonicParsing="false" text="RadioButton" />
+                              <RadioButton mnemonicParsing="false" text="RadioButton" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
                </children>
             </AnchorPane>
             <AmbientLight color="CHARTREUSE" layoutX="115.0" layoutY="56.0" lightOn="true" />
-            <Button layoutX="344.0" layoutY="243.0" mnemonicParsing="false" text="Generate Random Sequence" />
-            <ChoiceBox accessibleText="Sorting algorithm" layoutX="30.0" layoutY="14.0" prefWidth="150.0" />
-            <RadioButton layoutX="55.0" layoutY="64.0" mnemonicParsing="false" text="RadioButton" />
-            <RadioButton layoutX="55.0" layoutY="90.0" mnemonicParsing="false" text="RadioButton" />
       </children>
     </AnchorPane>
   </children>

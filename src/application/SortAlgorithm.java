@@ -23,4 +23,16 @@ public abstract class SortAlgorithm {
 	public String toString() {
 		return Arrays.toString(array);
 	}
+	
+	public String description() {
+		return "";
+	}
+	
+	public void setArray(int[] arr) {
+		this.array = arr;
+	}
+	
+	public int[] getArray() { 
+		return array;
+	}
 }
